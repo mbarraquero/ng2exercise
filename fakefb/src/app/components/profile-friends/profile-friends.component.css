@@ -1,0 +1,10 @@
+form {
+    width: 100%;
+}
+
+.media {
+    background-color: #ecf0f1;
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    margin: 5px;
+}

@@ -1,0 +1,2 @@
+<app-new-post [type]="'main'" (onNewPost)="setupPosts()"></app-new-post>
+<app-post *ngFor="let post of (posts$ | async | sortBy: 'date' : true)" [post]="post"></app-post>

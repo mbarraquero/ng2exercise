@@ -1,0 +1,15 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand profile-pic" (click)="viewProfile()">
+        <img src="{{user.pic}}" height="32" width="32">
+    </a>
+    <a class="navbar-brand" (click)="viewProfile()">{{user.fullName}}</a>
+    <a class="navbar-brand" (click)="viewFeed()">Start</a>
+    <div class="navbar-nav">
+        <button class="btn btn-default" (click)="logout()">Logout</button>
+    </div>
+    </div>
+</nav>
+<main role="main" class="container main-container">
+    <router-outlet></router-outlet>  
+</main>

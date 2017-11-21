@@ -1,0 +1,13 @@
+<form class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input type="text" name="search" class="form-control" placeholder="{{placeholder}}" [(ngModel)]="search">
+  </div>
+</form>
+<div class="media" *ngFor="let friend of (friends | filterBy: 'fullName': search)">
+  <div class="media-left media-middle">
+      <img class="media-object" src="{{friend.pic}}" width="64" height="64">
+  </div>
+  <div class="media-body">
+    <a (click)="viewProfile(friend)"><h4>{{friend.fullName}}</h4></a>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.jumbotron {
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.media-left.media-middle {
+    padding: 10px;
+}
+
+.media-left.media-middle img {
+    border: 1px solid skyblue;
+}

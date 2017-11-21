@@ -1,0 +1,18 @@
+<div class="media" [ngClass]="post.type">
+  <div class="media-left">
+    <img src="{{post.user.pic}}" height="{{picSize}}" width="{{picSize}}" (click)="viewProfile()">
+  </div>
+  <div class="media-body">
+      <a (click)="viewProfile()"><h4>{{post.user.fullName}}</h4></a>
+      <h6>{{post.date | date:'medium'}}</h6>
+      <p [innerHtml]="postContent"></p>
+  </div>
+  <div class="media-footer">
+    <button [ngClass]="{'liked': liked}" (click)="toggleLike()"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+    <div *ngIf="likesCount" class="likes-tooltip">{{likesCount}} like{{likesCount === 1 ? '' : 's'}}
+      <span class="tooltip-text">{{likesText}}</span>
+    </div>
+  </div>
+  <app-post *ngFor="let reply of (post.replies | sortBy: 'date')" [post]="reply"></app-post>
+  <app-new-post [parent]="post" [type]="'reply'" *ngIf="post.type !== 'reply'"></app-new-post>
+</div>

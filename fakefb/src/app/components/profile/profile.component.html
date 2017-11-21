@@ -1,0 +1,31 @@
+
+<div class="jumbotron media" *ngIf="!loading">
+    <div class="media-left media-middle">
+        <img class="media-object" src="{{user.pic}}" width="128" height="128">
+    </div>
+    <div class="media-body">
+        <h2>{{user.fullName}}</h2>
+        <h4 *ngIf="requestReceived">Friend request received</h4>
+        <h4 *ngIf="requestSent">Friend request sent</h4>
+        <h4 *ngIf="isFriend">Friends</h4>
+        <button class="btn btn-primary" *ngIf="notFriends" (click)="sendFriendRequest()">Send friend request</button>
+        <div class="btn-group" role="group" *ngIf="requestReceived">
+            <button class="btn btn-success btn-sm" (click)="approveRequest()">Accept</button>
+            <button class="btn btn-danger btn-sm" (click)="rejectRequest()">Reject</button>
+        </div>
+        <button class="btn btn-danger btn-xs" *ngIf="requestSent" (click)="cancelRequest()">Cancel friend request</button>
+        <button class="btn btn-danger btn-xs" *ngIf="isFriend" (click)="unfriend()">Remove from friends</button>
+    </div>
+    <div class="media-footer">
+        <ul class="nav nav-pills">
+            <li role="presentation" *ngFor="let viewOption of viewOptions"
+                [ngClass]="{'active': view === viewOption}"
+                (click)="selectView(viewOption)">
+                <a>{{viewOption}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<app-profile-feed [user]="user" *ngIf="!loading && view==='Posts'"></app-profile-feed>
+<app-profile-friends [user]="user" [friends]="user.friends" [placeholder]="'Find friends'" *ngIf="!loading && view==='Friends'"></app-profile-friends>
+<app-profile-friends [user]="me" [friends]="notMyFriends" [placeholder]="'Find other people'" *ngIf="!loading && view==='Make Friends'"></app-profile-friends>

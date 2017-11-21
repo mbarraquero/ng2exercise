@@ -1,0 +1,161 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "moe",
+      "password": "123",
+      "fullName": "Moegra",
+      "friendIds": [
+        2,
+        3,
+        4
+      ],
+      "friendRequests": [],
+      "pic": "https://www.biography.com/.image/t_share/MTE5NTU2MzE2MDMwNjY2MjUx/moe-howard-248616-1-402.jpg"
+    },
+    {
+      "id": 2,
+      "userName": "larry",
+      "password": "456",
+      "fullName": "Chaly",
+      "friendIds": [
+        1
+      ],
+      "friendRequests": [
+        3
+      ],
+      "pic": "https://cdn-images-1.medium.com/max/1200/1*8O3MeV31yd_QDeMnKRXZrw.jpeg"
+    },
+    {
+      "id": 3,
+      "userName": "curly",
+      "password": "789",
+      "fullName": "Gordo Drogadicto",
+      "friendIds": [
+        1
+      ],
+      "pic": "https://pbs.twimg.com/profile_images/518754341084069888/sCacoy8i_400x400.jpeg",
+      "friendRequests": []
+    },
+    {
+      "id": 4,
+      "userName": "shemp",
+      "password": "000",
+      "fullName": "Sobredosis",
+      "friendIds": [
+        1
+      ],
+      "friendRequests": [],
+      "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Shemp.jpg/300px-Shemp.jpg"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "user": 1,
+      "type": "main",
+      "content": "Estoy re puesto",
+      "date": "Thu, 26 Oct 2017 15:41:08 GMT",
+      "likes": [
+        2,
+        3
+      ],
+      "replies": [
+        2,
+        3,
+        9,
+        14
+      ]
+    },
+    {
+      "id": 2,
+      "user": 3,
+      "likes": [],
+      "content": "Convida ortiba",
+      "type": "reply",
+      "date": "Thu Oct 26 2017 12:42:08 GMT"
+    },
+    {
+      "id": 3,
+      "user": 2,
+      "likes": [
+        1
+      ],
+      "content": "Rescatate gordo fumaporro",
+      "type": "reply",
+      "date": "Thu Oct 26 2017 12:43:08 GMT"
+    },
+    {
+      "id": 4,
+      "user": 2,
+      "type": "main",
+      "content": "Alguien tiene alplax para bajar?",
+      "date": "Thu, 26 Oct 2017 12:44:08 GMT",
+      "likes": [
+        3
+      ],
+      "replies": []
+    },
+    {
+      "id": 5,
+      "user": 3,
+      "type": "main",
+      "content": "Cómo me gusta en pala",
+      "date": "Thu, 26 Oct 2017 15:45:08 GMT",
+      "likes": [
+        1
+      ],
+      "replies": [
+        6,
+        7,
+        8,
+        13
+      ]
+    },
+    {
+      "id": 6,
+      "user": 1,
+      "type": "reply",
+      "content": "Pasó el negro jeringa?",
+      "date": "Thu, 26 Oct 2017 15:46:08 GMT",
+      "likes": [
+        1
+      ]
+    },
+    {
+      "id": 7,
+      "user": 3,
+      "type": "reply",
+      "content": "No, pegué con el gordo traste negro",
+      "date": "Thu, 26 Oct 2017 15:47:08 GMT",
+      "likes": []
+    },
+    {
+      "user": 1,
+      "type": "reply",
+      "content": "Ahora te voy a dar una pala",
+      "date": "Thu, 26 Oct 2017 18:55:56 GMT",
+      "likes": [],
+      "id": 8
+    },
+    {
+      "user": 4,
+      "type": "reply",
+      "content": "Me pasé de mambo",
+      "date": "Fri, 27 Oct 2017 20:40:50 GMT",
+      "likes": [],
+      "id": 9
+    },
+    {
+      "id": 10,
+      "user": 4,
+      "type": "main",
+      "content": "Quedé duro",
+      "date": "Fri, 27 Oct 2017 20:40:57 GMT",
+      "likes": [
+        1
+      ],
+      "replies": []
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+.media {
+    background-color: lavender;
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+h4 {
+    color: darkgreen;
+}
+
+h6 {
+    font-size: 10px;
+    color: darkgray;
+}
+
+.reply {
+    font-size: 14px;
+}
+
+.reply .media-body * {
+    margin-bottom: 2px;
+}
+
+.reply .media-body h4 {
+    margin-top: 2px;
+    font-size: 16px;
+}
+
+.media-footer {
+    margin-left: 64px;
+}
+
+.reply .media-footer {
+    margin-left: 32px;
+}
+
+button {
+    color: green;
+    background-color: inherit;
+    border: none;
+}
+
+button.liked {
+    color: lightgreen;
+}
+
+/* Tooltip container */
+.likes-tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.likes-tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    white-space: pre-line;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Tooltip arrow */
+.likes-tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.likes-tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}

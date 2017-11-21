@@ -1,0 +1,14 @@
+<div class="media" *ngIf="!loading">
+    <div class="media-left">
+      <img src="{{post.user.pic}}" height="{{picSize}}" width="{{picSize}}">
+    </div>
+    <div class="media-body">
+      <h4 *ngIf="isMain">{{post.user.fullName}}</h4>
+      <textarea [(ngModel)]="post.content" [ngClass]="type" [appOnEnter]="savePost"></textarea>
+    </div>
+    <div class="media-footer">
+      <div class="btn-group pull-right" role="group" [ngClass]="{'btn-group-xs': !isMain}">
+        <button type="button" class="btn btn-primary" (click)="savePost()">{{postButtonText}}</button>
+      </div>
+    </div>
+  </div>
